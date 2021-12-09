@@ -69,8 +69,6 @@ const loginUsuario = async(req,res=response)=>{
         })
     }
 
-
-
     //confirmar los password
 
     const validPassword = bcrypt.compareSync(password, usuario.password)

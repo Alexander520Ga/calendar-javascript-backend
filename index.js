@@ -38,18 +38,6 @@ app.listen(process.env.PORT, console.log(`corriendo en puerto ${process.env.PORT
 
 
 /* 
-pib nominal(guatemala)   pib per capita(panama)    idh(panama)   territorio(guatemala)    infrastructura(panama)
-
-poblacion(guatemala)     moneda(belice)    crecimiento economico(panama)     seguridad(panama)
-
-turismo(panama)       salario(panama)       poderMilitar(guatemala)      esperanza de vida(panama)  salud(panama)
------------------------------------------------------------------------------------------------
-pib nominal(israel)   pib per capita(israel)    idh(israel)   territorio(egito)    educacion(israel)
-
-poblacion(egipto)     moneda(israel)    crecimiento economico(israel)     seguridad(egitp)
-
-turismo(egitp)       salario(israel)       poderMilitar(egito)      esperanza de vida(israel)
-
 
 heart   hart
 hand    hend
@@ -134,6 +122,13 @@ stir        ster
 compose     compous
 grin        grin
 remark      rimark
+
+bind    baind
+focus     foucus
+hurt    jurt
+fix
+pursue  persu
+
 
 
 */
