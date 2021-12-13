@@ -26,6 +26,7 @@ router.post('/',
     validarCampos
 
 ],loginUsuario) 
+
 router.get('/renew',validarJWT,revalidarToken)
     //sanidad seguridad eduacion 
 module.exports=[

@@ -54,9 +54,7 @@ const loginUsuario = async(req,res=response)=>{
 
     const {email,password}= req.body
 
-
     try {
-
 
     const  usuario = await Usuario.findOne({email});
 
@@ -70,7 +68,6 @@ const loginUsuario = async(req,res=response)=>{
     }
 
     //confirmar los password
-
     const validPassword = bcrypt.compareSync(password, usuario.password)
 
     if(!validPassword){
@@ -79,15 +76,11 @@ const loginUsuario = async(req,res=response)=>{
             ok:false,
             msg:'password incorrecto'
         })
-
     }
-
-        //generar nuestro JWT
-
-       //generar JWT
+         //generar nuestro JWT      localhost:4000
+         //generar JWT  
 
    const token = await generarJWT(usuario.id,usuario.name)
-
 
         res.json({
             ok:true,
@@ -96,8 +89,6 @@ const loginUsuario = async(req,res=response)=>{
             token
             
         })
-
-        
     } catch (error) {
         console.log(error)
         res.status(500).json({
@@ -105,12 +96,7 @@ const loginUsuario = async(req,res=response)=>{
             msg:'por favor hable con el administrador'
         })
     }
-
-    
-
-
-    
-    
+ 
 }
 
 
@@ -128,7 +114,9 @@ const revalidarToken = async(req,res=response)=>{
 
     res.json({
         ok:true  ,
-      token
+        token,
+        uid,
+        name,
     })
 }
 

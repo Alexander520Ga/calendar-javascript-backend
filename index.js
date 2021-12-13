@@ -129,6 +129,18 @@ hurt    jurt
 fix
 pursue  persu
 
+drop        drap
+laugh       laf
+delay       diley
+commit      komit
+reject  riyect
+business       biznes
 
+president
+spread      spred
+undertake   ondertek
+account     akaunt
+recall      ricol
+earn        ern
 
 */
