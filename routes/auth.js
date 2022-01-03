@@ -21,8 +21,8 @@ router.post(
 
 router.post('/',
 [//middelwares
-    check('password','el password es obligatorio').isLength({min:6}),
-    check('email','el email es obligatorio').isEmail(),
+    check('email', 'El email es obligatorio').isEmail(),
+    check('password', 'El password debe de ser de 6 caracteres').isLength({ min: 6 }),
     validarCampos
 
 ],loginUsuario) 
