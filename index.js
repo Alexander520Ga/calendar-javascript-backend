@@ -1,32 +1,40 @@
-const express = require('express');
-require('dotenv').config();
-const cors = require('cors');
-const { dbConnection } = require('./database/config');
+//const { createPrivateKey } = require('crypto');
+const express = require('express');// importar express import express form 'express'
+//const { monitorEventLoopDelay } = require('perf_hooks');
+require('dotenv').config()
+const cors = require('cors')
+//crear el servidor de express
+const {dbConection} = require('./database/config')
 
-// Crear el servidor de express
-const app = express();
+console.log(process.env)
 
-// Base de datos
-dbConnection();
+const app = express(); 
 
-// CORS
+//base de datos
+dbConection()
+
+//cors
+
 app.use(cors())
 
-// Directorio Público
-app.use( express.static('public') );
+//directorio publico
 
-// Lectura y parseo del body
-app.use( express.json() );
+app.use( express.static('public') ) 
 
-// Rutas
-app.use('/api/auth', require('./routes/auth') );
-app.use('/api/events', require('./routes/events') );
+//lectura y parseo del body
+app.use(express.json())
 
 
-// Escuchar peticiones
-app.listen( process.env.PORT, () => {
-    console.log(`Servidor corriendo en puerto ${ process.env.PORT }`);
-});
+//rutas
+app.use('/api/auth', require('./routes/auth'));
+
+//rutas eventos
+app.use('/api/events', require('./routes/events'));
+
+/* //escuchar peticiones  */ 
+
+app.listen(process.env.PORT, console.log(`corriendo en puerto ${process.env.PORT}`))
+
 
 
 /* 
